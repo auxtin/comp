@@ -51,24 +51,33 @@ int main()
                     while (iss >> arg)
                     {
                         args.push_back(arg);
+                        cout << arg << ",";
                     }
-                    if (!args.empty() && stoi(args[0]) > 0)
-                    {
-                        auto it = find(members.begin(), members.end(), gifter);
-                        int idx = distance(members.begin(), it);
-                        balance[idx] -= stoi(args[0]);
 
+                    auto it = find(members.begin(), members.end(), gifter);
+                    int idx = distance(members.begin(), it);
+                    balance[idx] -= stoi(args[0]);
+
+                    if (stoi(args[1]) > 0)
+                    {
                         runningCount = count + stoi(args[1]);
                         give = stoi(args[0]) / stoi(args[1]),
                         keep = stoi(args[0]) % stoi(args[1]);
-                        balance[idx] += keep;
                     }
                     else
                     {
-                        runningCount = count + 1;
-                        give = 0, keep = 0;
+                        give = 0;
+                        keep = 0;
                     }
+                    balance[idx] += keep;
                     cout << gifter << " is gifting " << give << " to " << args[1] << " people and keeping " << keep << endl;
+                    if (args[0] == "0" && args[1] == "0")
+                    {
+                        cout << "EDGECASE===\n";
+                        args.clear();
+                        gifter = "";
+                        runningCount = INT_MIN;
+                    }
                 }
                 else
                 {
@@ -92,6 +101,7 @@ int main()
             else
             {
                 gifter = line;
+                cout << "gifter is: " << gifter << endl;
             }
         }
         count++;
