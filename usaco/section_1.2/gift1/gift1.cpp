@@ -15,6 +15,14 @@ LANG: C++
 
 using namespace std;
 
+void reset(vector<string> &args, string &gifter, int &runningCount)
+{
+    // cout << "===\n";
+    args.clear();
+    gifter = "";
+    runningCount = INT_MIN;
+}
+
 int main()
 {
     ofstream fout("gift1.out");
@@ -51,13 +59,11 @@ int main()
                     while (iss >> arg)
                     {
                         args.push_back(arg);
-                        cout << arg << ",";
+                        // cout << arg << ",";
                     }
-
                     auto it = find(members.begin(), members.end(), gifter);
                     int idx = distance(members.begin(), it);
                     balance[idx] -= stoi(args[0]);
-
                     if (stoi(args[1]) > 0)
                     {
                         runningCount = count + stoi(args[1]);
@@ -70,13 +76,10 @@ int main()
                         keep = 0;
                     }
                     balance[idx] += keep;
-                    cout << gifter << " is gifting " << give << " to " << args[1] << " people and keeping " << keep << endl;
+                    // cout << gifter << " is gifting " << give << " to " << args[1] << " people and keeping " << keep << endl;
                     if (args[0] == "0" && args[1] == "0")
                     {
-                        cout << "EDGECASE===\n";
-                        args.clear();
-                        gifter = "";
-                        runningCount = INT_MIN;
+                        reset(args, gifter, runningCount);
                     }
                 }
                 else
@@ -87,13 +90,10 @@ int main()
                         auto it = find(members.begin(), members.end(), line);
                         int idx = distance(members.begin(), it);
                         balance[idx] += give;
-                        cout << line << " will receive " << give << endl;
+                        // cout << line << " will receive " << give << endl;
                         if (count == runningCount)
                         {
-                            cout << "===\n";
-                            args.clear();
-                            gifter = "";
-                            runningCount = INT_MIN;
+                            reset(args, gifter, runningCount);
                         }
                     }
                 }
@@ -101,7 +101,7 @@ int main()
             else
             {
                 gifter = line;
-                cout << "gifter is: " << gifter << endl;
+                // cout << "gifter is: " << gifter << endl;
             }
         }
         count++;
