@@ -1,0 +1,86 @@
+{
+    "version": "2.0.0",
+    "inputs": [
+        {
+            "id": "problemDir",
+            "type": "promptString",
+            "description": "Path to the problem folder (press Enter to use the current file's folder)",
+            "default": "${fileDirname}"
+        }
+    ],
+    "tasks": [
+        {
+            "label": "CF: Build (clang++)",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "-lc",
+                "cd \"${input:problemDir}\" && clang++ -std=c++17 -O2 -pipe -Wall -Wextra *.cpp -o a.out"
+            ],
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "runOptions": {
+                "reevaluateOnRerun": true
+            }
+        },
+        {
+            "label": "CF: Build+Run (clang++)",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "-lc",
+                "cd \"${input:problemDir}\" && clang++ -std=c++17 -O2 -pipe -Wall -Wextra *.cpp -o a.out && ./a.out < input.txt"
+            ],
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "runOptions": {
+                "reevaluateOnRerun": true
+            }
+        },
+        // Use this when you want GNU parity (after CLT is updated) and <bits/stdc++.h>/PBDS
+        {
+            "label": "CF: Build (g++-15)",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "-lc",
+                "SDKROOT=\"$(xcrun --show-sdk-path)\" && cd \"${input:problemDir}\" && SDKROOT=\"$SDKROOT\" g++-15 -std=gnu++17 -O2 -pipe -Wall -Wextra -isysroot \"$SDKROOT\" *.cpp -o a.out"
+            ],
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "runOptions": {
+                "reevaluateOnRerun": true
+            }
+        },
+        {
+            "label": "CF: Build+Run (g++-15)",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "-lc",
+                "SDKROOT=\"$(xcrun --show-sdk-path)\" && cd \"${input:problemDir}\" && SDKROOT=\"$SDKROOT\" g++-15 -std=gnu++17 -O2 -pipe -Wall -Wextra -isysroot \"$SDKROOT\" *.cpp -o a.out && ./a.out < input.txt"
+            ],
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "runOptions": {
+                "reevaluateOnRerun": true
+            }
+        },
+        {
+            "label": "CF: Run (use existing a.out)",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "-lc",
+                "cd \"${input:problemDir}\" && ./a.out < input.txt"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}

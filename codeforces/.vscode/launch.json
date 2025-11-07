@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug (clang++)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/a.out",
+            "args": [],
+            "cwd": "${fileDirname}",
+            "MIMode": "lldb",
+            "externalConsole": false,
+            "preLaunchTask": "CF: Build (clang++)"
+        },
+        {
+            "name": "Debug (g++-15)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/a.out",
+            "args": [],
+            "cwd": "${fileDirname}",
+            "MIMode": "lldb",
+            "externalConsole": false,
+            "preLaunchTask": "CF: Build (g++-15)"
+        }
+    ]
+}
