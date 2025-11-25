@@ -40,7 +40,6 @@
                 "reevaluateOnRerun": true
             }
         },
-        // Use this when you want GNU parity (after CLT is updated) and <bits/stdc++.h>/PBDS
         {
             "label": "CF: Build (g++-15)",
             "type": "shell",
@@ -70,6 +69,10 @@
             ],
             "runOptions": {
                 "reevaluateOnRerun": true
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
             }
         },
         {
