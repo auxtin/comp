@@ -1,16 +1,16 @@
 {
+    "version": 4,
     "configurations": [
         {
-            "name": "Mac",
-            "includePath": [
-                "${workspaceFolder}/**"
-            ],
-            "defines": [],
-            "compilerPath": "/usr/bin/g++",
+            "name": "macOS-gcc-15",
+            "compilerPath": "/opt/homebrew/bin/g++-15",
             "cStandard": "c17",
-            "cppStandard": "c++17",
-            "intelliSenseMode": "macos-gcc-x64"
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "macos-gcc-arm64",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/opt/homebrew/Cellar/gcc/15.2.0/include/c++/15/aarch64-apple-darwin25/bits/stdc++.h"
+            ]
         }
-    ],
-    "version": 4
+    ]
 }
