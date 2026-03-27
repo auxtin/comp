@@ -1,0 +1,23 @@
+there are n friends
+
+the total volume of drinks is given by bottles * ml in each 
+k * l
+
+total number of slices
+c * d
+
+salt
+p
+
+required drink for each friend
+nl
+
+required salt for each friend
+np
+***
+
+calculate the inventory
+k*l ; c*d; p
+
+what is the limiting factor?
+while there is inventory maintain a count and subtract the requirements until something runs out

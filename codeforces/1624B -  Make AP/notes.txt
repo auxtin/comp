@@ -1,0 +1,29 @@
+core insight
+to create an arithmetic progression we need the following to be true
+there exists some d such that:
+d = b - a = c - b
+
+for this problem it allows us to change one of the elements a,b,c by multiplying it by m
+in order for it become an AP
+
+there are three cases:
+scale a:
+b - am = c - b
+-am = c - 2b
+am = 2b - c
+a needs to be postive,
+2b - c > 0
+(2b - c) % a =- 0
+
+scale b:
+bm - a = c - bm
+2bm = c + a
+bm = (c + a) / 2
+(c - a) / 2 > 0
+((c - a) / 2) % b == 0
+
+scale c:
+b - a = cm - b
+2b - a = cm
+a - 2b > 0
+(a - 2b) % c == 0
