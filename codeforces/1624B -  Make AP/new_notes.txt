@@ -1,0 +1,14 @@
+notes for 1624b - Make AP
+3 integers a, b, c
+- can only perform the operation once
+    - mult by m to make a, b, c AP
+
+i;m thinking aout the relationship between a, b and c
+
+
+
+(a + c) // 2 = b
+a = 2b - c
+c = 2b - a
+
+*make sure they are whole numbers
