@@ -1,0 +1,18 @@
+determine the parity of the n
+
+this will let us know how many odds and evens there are for indexing in the odd or even space
+
+odd n
+num of evens n / 2
+num of odds evens + 1
+
+even n 
+num of even = num of odds = n /2
+
+there are 2 formuals to traverse in the odd space or even space
+
+for odd space up the num odds:
+2*k - 1
+
+for even space is the complement after k odds
+2(n - num_odds)
