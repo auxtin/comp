@@ -1,0 +1,11 @@
+approach
+- process the variables 
+  - t is the number of test cases
+  - n is the number array elements
+  - a is the array
+  - l is the lower or left
+  - r is the higher or right
+  - k is the number replaced to 
+
+go to those indices and replace the elements
+sum up the entire array and check to see if odd
