@@ -1,0 +1,15 @@
+5009
+5000 + 9
+-> go thru each digit right to left, 
+   eeping tracj of the zeros we can 
+   and adding it to a result arr
+   -> each digit is found by multiplying
+      what we are diving about by 10^i
+      - 10^0 = 1. 10^1 = 10
+      5009 / 10 = 5000 + 9
+      5009 % 10 = 9
+-> go through n, mod by 10 * 10^i where i
+   is 0 to n - 1
+
+   -> if the result is not 0
+
