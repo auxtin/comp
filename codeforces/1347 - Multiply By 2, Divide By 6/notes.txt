@@ -1,0 +1,13 @@
+total = m + d
+      = (b - a) + b
+      = 2b - a
+  
+when doing divisions, only b is affected which is why the number
+of divisions = b
+
+when doing mulitplications, the number of operations is 
+b - a
+
+now that m = b - a
+d = b
+
