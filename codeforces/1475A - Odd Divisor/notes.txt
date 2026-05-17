@@ -1,0 +1,22 @@
+every factor if even, will not only be not prime, but be able to be divisible by 2, making it able to be represented by binary, or as a power of 2.
+- because of this fact, all we have to check for is if it ISNT a power of 2
+
+
+a question i have , tell me if this is what people need to focus on, is is it guaranteed to have an odd factor if it meets this criteria?
+I think so. because there aren't any primes that are inherently divisible by two otherwise, it wouldn't b e a prime and primes are odd
+
+
+number in binary notation
+2 = 2^1 even, and n/a 00000001
+3 = 2^1 + 2^0         00000011
+4 = 2^1               00000100
+5 = 2^2 + 2^0         00000101             
+6 = 2^2 + 2^1         00000110
+7 = 2^2 + 2^1 + 2^0   00000111
+8 = 2^3               00001000
+9 = 2^3 + 2^0         00001001
+
+Observation: if the at least one bit is turned on, it will be odd. look at for n = 3,5,7 the previous numbers
+
+-> approach: check with the previous n and see if there is overal
+-> mechanics: `AND`
