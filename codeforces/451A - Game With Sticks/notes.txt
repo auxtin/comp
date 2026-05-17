@@ -1,0 +1,18 @@
+akshat goes first
+
+removing a point removes it from the board making it have one less row and column
+
+who ever goes first loses
+because an even number of interesections means that it lands back on akshat and malvika wins
+and odd the opposite one thing to note is we can only take away tne minimum number of rows or 
+columns away.
+so we evaluate what the minimum dimension is, and if its even, malvika wins
+
+
+2 2
+2 3
+5 5
+
+
+
+
